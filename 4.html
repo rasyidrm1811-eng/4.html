@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <style>
+        /* CSS internal untuk styling */
+        
+        /* Body dengan background biru dan posisi tengah untuk konten */
+        body {
+            background-color: blue; /* Background biru sesuai ketentuan */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Tinggi penuh layar */
+            display: flex; /* Menggunakan flexbox untuk posisi tengah */
+            justify-content: center; /* Tengah horizontal */
+            align-items: center; /* Tengah vertikal */
+            font-family: Arial, sans-serif; /* Font sederhana */
+            color: white; /* Warna teks putih untuk kontras */
+        }
+        
+        /* Styling untuk teks "Click Here" */
+        #clickText {
+            font-size: 2rem; /* Ukuran font besar agar mudah diklik */
+            cursor: pointer; /* Kursor pointer saat hover */
+            user-select: none; /* Mencegah teks dipilih */
+        }
+        
+        /* Styling untuk gambar */
+        #image {
+            display: none; /* Gambar tersembunyi awalnya */
+            max-width: 80%; /* Ukuran wajar, maksimal 80% lebar layar */
+            height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+            border-radius: 10px; /* Sudut melengkung agar lebih menarik */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek */
+        } 
+    </style>
+</head>
+<body>
+    <!-- HTML untuk konten -->
+    
+    <!-- Teks yang bisa diklik, dengan id untuk JS -->
+    <div id="clickText">Click Here</div>
+    
+    <!-- Gambar yang akan muncul setelah klik, dengan id untuk JS -->
+    <img id="image" src="dcd6b4b5cde7af34c40114afb810708a.jpg" alt="Gambar yang ditampilkan">
+    
+    <script>
+        // JavaScript sederhana untuk menangani event klik
+        
+        // Ambil elemen teks dan gambar berdasarkan id
+        const clickText = document.getElementById('clickText'); // Elemen teks
+        const image = document.getElementById('image'); // Elemen gambar
+        
+        // Tambahkan event listener untuk klik pada teks
+        clickText.addEventListener('click', function() {
+            // Sembunyikan teks saat diklik
+            clickText.style.display = 'none';
+            
+            // Tampilkan gambar saat diklik
+            image.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
